@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HazFashion Library</title>
+  <link href="background.webp" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <style>
+    /* Chatbox styles */
+    .chatbox {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .chatbox h3 {
+      background-color: #ff6347;
+      color: white;
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      max-height: 200px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .input-container {
+      display: flex;
+      padding: 5px;
+    }
+
+    .input-container input {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .input-container button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-color:pink;">
+  <header>
+    <h1>HazFashion Library</h1>
+    <nav>
+      <a href="#">Main</a>
+      <a href="#collection">Collections</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Questions and Feedback</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images/logo.png" width="300px"/>
+    <h2 style="background-color:rgba(255, 99, 71, 0.4);">Welcome To HazFashion Library</h2>
+    <p style="color:black;background-color:rgb(254, 110, 144);">This library is where you can find fashion
+    inspiration from various eras and cultures. 
+    Explore our extensive collection of books and digital resources.</p>
+  </section>
+
+  <section id="collection" class="section">
+    <h3>Selected Collection</h3>
+    <div class="books">
+      <a href="books.html">
+      <div class="book">
+        <img src="https://i.postimg.cc/t4r4TG2D/history.jpg" alt="Buku 1">
+        <h4>20th Century Fashion History</h4>
+        <p>Traces the evolution of styles and trends throughout the 20th century.</p>
+      </div>
+      <div class="book">
+        <a href="traditional.html">
+        <img src="images/textile.avif" alt="Buku 2">
+        <h4>Traditional Textiles of The World</h4>
+        <p>Recognize the uniqueness of textiles from various global cultures.</p>
+      </div>
+      <div class="book">
+        <a href="modern-fashion.html">
+        <img src="https://i.postimg.cc/pX37Ch9j/fdesign.jpg" alt="Buku 3">
+        <h4>Modern Fashion Design</h4>
+        <p>Inspiration and techniques in contemporary fashion design.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="chatbox">
+    <h3>AI Chatbox</h3>
+    <div class="messages" id="messages">
+      <!-- Chat messages will appear here -->
+    </div>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+
+  
+  <footer>
+    &copy; 2025 HazFashion Library. Copyright Reserved.
+  </footer>
+
+  <script>
+    // Simple chat functionality
+    const sendButton = document.getElementById('sendButton');
+    const userInput = document.getElementById('userInput');
+    const messages = document.getElementById('messages');
+
+    sendButton.addEventListener('click', () => {
+      const userMessage = userInput.value;
+      if (userMessage) {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = `You: ${userMessage}`;
+        messages.appendChild(messageElement);
+        userInput.value = ''; // Clear input
+      }
+    });
+  </script>
+</body>
+</html>

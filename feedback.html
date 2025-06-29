@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form - Fashion Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+   <link href="feedback-style.css" rel="stylesheet" />
+
+</head>
+<body>
+  <header>
+    <h1>Fashion Library</h1>
+  </header>
+
+  <div class="container">
+    <h2>Feedback Form</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="emel">Email Address</label>
+      <input type="email" id="emel" name="emel" required>
+
+      <label for="category">Question Category</label>
+      <select id="category" name="category" required>
+        <option value="">-- Please Choose --</option>
+        <option value="collection">Book Collection Inquiry</option>
+        <option value="registration">Member Registration</option>
+        <option value="recommendation">New Book Recommendations</option>
+        <option value="other">Others</option>
+      </select>
+
+      <label for="mesej">Message / Feedback</label>
+      <textarea id="mesej" name="mesej" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 HazFashion Library. Copyright Reserved.
+  </footer>
+</body>
+</html>

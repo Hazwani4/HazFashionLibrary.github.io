@@ -1,0 +1,108 @@
+ 
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #ffeaea;
+      color: #333;
+    }
+    header {
+      background-color: #fcdddd;
+      padding: 20px 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin: 0;
+      color: #c2185b;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #c2185b;
+    }
+    .hero {
+      background-image:  url('https://i.postimg.cc/WbJgMDyc/pink.avif');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 40px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .section h3 {
+      font-size: 2em;
+      margin-bottom: 40px;
+      color: #c2185b;
+    }
+    .books {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .book {
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .book:hover {
+      transform: translateY(-5px);
+    }
+    .book img {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .book h4 {
+      margin: 15px;
+      font-size: 1.2em;
+    }
+    .book p {
+      margin: 0 15px 15px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    footer {
+      background-color: #fcd8d8;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+    }
+    @media (max-width: 768px) {
+      .books {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    a {
+  text-decoration: none;
+  color: inherit; /* Optional: keeps it the same color as surrounding text */
+}
+
+a:hover {
+  text-decoration: none;
+}
